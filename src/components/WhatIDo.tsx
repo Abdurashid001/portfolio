@@ -90,19 +90,19 @@ const WhatIDo = () => {
               <h3>DEVELOP</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Software Developer focused on scalable systems and clean code. 
+                Creating fast, reliable, and efficient solutions.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
+                <div className="what-tags">RestApi</div>
+                <div className="what-tags">Django</div>
+                <div className="what-tags">Python</div>
                 <div className="what-tags">React</div>
                 <div className="what-tags">Css</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
+                <div className="what-tags">Laravel</div>
+                <div className="what-tags">Yii2</div>
                 <div className="what-tags">PHP</div>
                 <div className="what-tags">MySql</div>
               </div>
@@ -128,22 +128,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
+              <h3>SYSADMIN</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                System Administrator focused on system reliability and security. 
+                Keeping infrastructure efficient and stable.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Windows Server</div>
+                <div className="what-tags">Active Directory</div>
+                <div className="what-tags">VMware</div>
+                <div className="what-tags">MikroTik</div>
+                <div className="what-tags">DNS, DHCP, VLAN</div>
+                <div className="what-tags">Linux</div>
+                <div className="what-tags">Zabbix</div>
               </div>
               <div className="what-arrow"></div>
             </div>
