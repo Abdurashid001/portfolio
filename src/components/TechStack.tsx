@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { useRef, useMemo, useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
@@ -125,6 +126,7 @@ function Pointer({ vec = new THREE.Vector3(), isActive }: PointerProps) {
 }
 
 const TechStack = () => {
+  const { t } = useLanguage();
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -168,7 +170,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2> {t.techstack.title}</h2>
 
       <Canvas
         shadows

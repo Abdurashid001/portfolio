@@ -4,11 +4,13 @@ import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./styles/Navbar.css";
+import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
+  const { lang, setLang, t } = useLanguage();
   useGSAP(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -47,18 +49,27 @@ const Navbar = () => {
         </a>
         <ul>
           <li>
+            <a 
+              onClick={(e) => { e.preventDefault(); setLang(lang === 'en' ? 'ru' : 'en'); }} 
+              style={{ cursor: 'pointer', opacity: 0.8 }} 
+              data-cursor="disable"
+            >
+              <HoverLinks text={lang === 'en' ? 'RU / EN' : 'EN / RU'} />
+            </a>
+          </li>
+          <li>
             <a data-href="#about" href="#about">
-              <HoverLinks text="ABOUT" />
+              <HoverLinks text={t.nav.about} />
             </a>
           </li>
           <li>
             <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
+              <HoverLinks text={t.nav.work} />
             </a>
           </li>
           <li>
             <a data-href="#contact" href="#contact">
-              <HoverLinks text="CONTACT" />
+              <HoverLinks text={t.nav.contact} />
             </a>
           </li>
         </ul>

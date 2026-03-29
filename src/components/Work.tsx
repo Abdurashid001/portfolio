@@ -3,41 +3,14 @@ import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(useGSAP);
 
-const myProjects = [
-  {
-    title: "Online Shop",
-    category: "Full-Stack",
-    tools: "PHP, MySQL, HTML, CSS",
-    description: "A fully functional online shopping system with admin panel for customers.",
-    image: "/images/pro1.webp"
-  },
-  {
-    title: "Online Avtomaktab",
-    category: "Full-Stack",
-    tools: "PHP, Vue.js, MySQL",
-    description: "A fully functional electronic driving school system with admin panel for customers.",
-    image: "/images/pro2.webp" // Rasmingiz bo'lsa buni pro2.webp qiling
-  },
-  {
-    title: "Barbershop Booking",
-    category: "Frontend & Backend",
-    tools: "PHP, MySql, Vue.js, Tailwind",
-    description: "A fully functional barbershop booking system with admin panel for customers.",
-    image: "/images/pro3.webp" // pro3.webp
-  },
-  {
-    title: "Weather App",
-    category: "Web Application",
-    tools: "Django, PostgreSQL, HTML, CSS",
-    description: "You can get daily weather information of any location or area through this application.",
-    image: "/images/pro4.webp" // pro4.webp
-  }
-];
+
 
 const Work = () => {
+  const { t } = useLanguage();
   useGSAP(() => {
   let translateX: number = 0;
 
@@ -80,11 +53,9 @@ const Work = () => {
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
-        <h2>
-          My <span>Work</span>
-        </h2>
+        <h2>{t.work.title}</h2>
         <div className="work-flex">
-          {myProjects.map((project, index) => (
+          {t.work.projects.map((project, index) => (
             <div className="work-box" key={index}>
               <div className="work-info">
                 <div className="work-title">

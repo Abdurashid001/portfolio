@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 import "./styles/WhatIDo.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLanguage } from "../context/LanguageContext";
 
 const WhatIDo = () => {
+  const { t } = useLanguage();
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
@@ -27,12 +29,7 @@ const WhatIDo = () => {
   return (
     <div className="whatIDO">
       <div className="what-box">
-        <h2 className="title">
-          W<span className="hat-h2">HAT</span>
-          <div>
-            I<span className="do-h2"> DO</span>
-          </div>
-        </h2>
+        <h2 className="title">{t.whatIDo.title}</h2>
       </div>
       <div className="what-box">
         <div className="what-box-in">
@@ -87,13 +84,10 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
+              <h3>{t.whatIDo.develop}</h3>
               <h4>Description</h4>
-              <p>
-                Software Developer focused on scalable systems and clean code. 
-                Creating fast, reliable, and efficient solutions.
-              </p>
-              <h5>Skillset & tools</h5>
+              <p>{t.whatIDo.desc1}</p>
+              <h5>{t.whatIDo.skillset}</h5>
               <div className="what-content-flex">
                 <div className="what-tags">RestApi</div>
                 <div className="what-tags">Django</div>
@@ -128,13 +122,10 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>SYSADMIN</h3>
+              <h3>{t.whatIDo.sysadmin}</h3>
               <h4>Description</h4>
-              <p>
-                System Administrator focused on system reliability and security. 
-                Keeping infrastructure efficient and stable.
-              </p>
-              <h5>Skillset & tools</h5>
+              <p>{t.whatIDo.desc2}</p>
+              <h5>{t.whatIDo.skillset}</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Windows Server</div>
                 <div className="what-tags">Active Directory</div>
